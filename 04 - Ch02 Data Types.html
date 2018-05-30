@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sample Numbers</title>
+</head>
+<body>
+  <script>
+    //Store a number
+    var qty = 5
+    //Store a number
+    var price = 4.99
+    //Multiply two numbers and store result in variable
+    var subtotal = qty * price
+    //Show multiplication result
+    document.write(subtotal)
+    //Type in a line break tag
+    document.write("<br>")
+    //Show multiplication result with 2 decimal places
+    document.write(subtotal.toFixed(2))
+
+    var answer ="I dont know";
+
+    function multiply(){
+      var num1_input = document.getElementById("num1").value;
+      var num2_input = document.getElementById("num2").value;
+
+      if (isNaN(num1_input || num2_input)) {
+        answer = "Please enter a number"
+      } else {
+        answer = num1_input * num2_input;
+      }
+      
+      
+      document.getElementById("num1-test").innerHTML=num1_input;
+      document.getElementById("num2-test").innerHTML=num2_input;
+      document.getElementById("answer").innerHTML=answer;
+    };
+  </script>
+
+  <br>
+
+  <label for="num1">
+    <input type="text" id="num1" style="width:25px">
+  </label>
+
+  *
+
+  <label for="num2">
+    <input type="text" id="num2" style="width:25px">
+  </label>
+
+  <button type="button" onclick="multiply()">Enter</button>
+
+  <p>
+    <span id="num1-test"></span> *  
+    <span id="num2-test"></span> =
+    <span id="answer"></span>
+  </p>
+  
+
+</body>
+</html>

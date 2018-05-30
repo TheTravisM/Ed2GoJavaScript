@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>if tests</title>
+</head>
+
+<body>
+  <label for="text">Type your first name:
+    <input type="text" id="text">
+    <br/>
+    <button type="button" onclick="test()">Click me</button>
+  </label>
+
+  <br>
+
+  <script>
+    //Create a Boolean variable and give it a value.
+    var condition = false;
+    //Use the variable as a test condition.
+    if (condition) {
+      document.write("Condition is true");
+    } else {
+      document.write("Condition is not so true");
+    }
+  </script>
+
+  <br>
+
+  <script>
+
+    var age = 17
+    if (age >= 18) {
+      document.write("You are an adult")
+    } else {
+      document.write("You are a minor")
+    }
+  </script>
+
+  <br>
+
+  <script>
+
+    var text = document.getElementById("text").value;
+
+    function test() {
+      if (text) document.write("text is true");
+    }
+  </script>
+
+  <br>
+
+  <script>
+      //Create a number variable and give it a value.
+      var age = 65
+      //Use the variable as a test condition.
+      if (age <= 12) {
+          document.write("Child fare")
+      }
+      else if (age > 12 && age < 60) {
+          document.write("Adult fare")
+      } else {
+          document.write("Senior discount")
+      }   
+  </script>
+
+
+</body>
+
+</html>
