@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Music</title>
+    
+    <script>
+
+    //Does browser support range control?      
+    var temp = document.createElement("input");
+    temp.setAttribute("type", "range");
+    //supportsrange will be true if browser supports the range control.
+    var supportsrange = (temp.type == "range");
+
+    function expandContract(id) {
+      var x = document.getElementById(id);
+    }
+
+    </script>
+ 
+</head>
+<body>
+  <button type="button" onclick="playsound()">Sample</button>
+
+  <div id="grow">
+    <p>asdf</p>
+    <p>asdffds</p>
+    <p>asdffdsa</p>
+    <p>asdf</p>
+    <p>asdffds</p>
+    <p>asdffdsa</p>
+  </div>
+  <button type="button" onclick="expandContract()">Sample</button>
+</body>
+</html>
