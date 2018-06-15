@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expand</title>
+    
+    <script>
+
+      function expand() {
+        //var target = document.querySelector("[data-target]='cars']");
+        var x = this.querySelector("[data-target]").value;
+        x.style.backgroundColor = "red";
+      }
+
+    </script>
+
+    <style>
+    .js-expand {
+      display: none;
+    }
+    </style>
+ 
+</head>
+<body>
+  <button type="button" onclick="playsound()">Sample</button>
+
+  <div id="collapse">
+    <p>asdf</p>
+    <p>asdffds</p>
+    <p>asdffdsa</p>
+    <p>asdf</p>
+    <p>asdffds</p>
+    <p>asdffdsa</p>
+  </div>
+  <button type="button" onclick="expand()" data-target="#collapse" data-toggle="collapse">Expand</button>
+</body>
+</html>

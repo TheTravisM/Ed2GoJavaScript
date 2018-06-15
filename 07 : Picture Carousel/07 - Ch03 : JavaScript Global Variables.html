@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Carousel</title>
+
+  <style>
+    /* CSS code to style the pictures */
+
+    .carousel {
+      text-align: center;
+    }
+
+    #bigpic {
+      height: 400px;
+    }
+
+    .thumbs img {
+      height: 75px;
+    }
+  </style>
+ 
+ <script>
+  //The maximages global variable must equal
+  // the number of thumbnails in the gallery.
+  var maximages = 5;
+  //Folder name and start of file name of each image file.
+  var startpath = "pix3/birds"
+  //Filename extension of each image.
+  var extension = ".png"
+
+
+
+    //Show clicked image in the large img tag
+    function showbig(pic) {
+      document.getElementById("bigpic").src = pic;
+    }
+   </script>
+</head>
+
+<body>
+  <!-- HTML to display the pictures -->
+  <div class="carousel">
+    <img src="img/birds01.png" alt="" id="bigpic">
+
+    <div class="thumbs">
+      <img src="img/LeftArrow.png" alt="Previous" onclick="calcslide(-1)" >
+      <img src="img/birds01.png" alt="" onclick="showbig(this.src)">
+      <img src="img/birds02.png" alt="" onclick="showbig(this.src)">
+      <img src="img/birds03.png" alt="" onclick="showbig(this.src)">
+      <img src="img/birds04.png" alt="" onclick="showbig(this.src)">
+      <img src="img/birds05.png" alt="" onclick="showbig(this.src)">
+      <img src="img/RightArrow.png" alt="Previous" onclick="calcslide(1)" >
+    </div>
+    <!-- End thumbs -->
+  </div>
+  <!-- End carousel -->
+</body>
+
+</html>

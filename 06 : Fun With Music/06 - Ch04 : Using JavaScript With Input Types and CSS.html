@@ -4,24 +4,26 @@
     <title>Music</title>
     
     <script>
-
-    //Does browser support range control?      
-    var temp = document.createElement("input");
-    temp.setAttribute("type", "range");
-    //supportsrange will be true if browser supports the range control.
-    var supportsrange = (temp.type == "range");
-
-    function expandContract(id) {
-      var x = document.getElementById(id);
-    }
-
-    </script>
+        //Runs at end of page load, after everything else is rendered.
+        //Prevents sound and controls in incompatible browsers.
+        //See if browser supports range control.      
+        var temp = document.createElement("input");
+        temp.setAttribute("type", "range");
+        //supportsrange will be true if browser supports the range control.
+        var supportsrange = (temp.type == "range");
+        // Show sound controls only in browsers that play sound and support range control.
+        if (supportsrange && window.HTMLAudioElement) {
+          player.play()      
+        } else {
+          document.getElementById("soundcontrols").style.display = "none";
+        }
+      </script>
  
 </head>
 <body>
   <button type="button" onclick="playsound()">Sample</button>
 
-  <div id="grow">
+  <div id="collapse">
     <p>asdf</p>
     <p>asdffds</p>
     <p>asdffdsa</p>
@@ -29,6 +31,6 @@
     <p>asdffds</p>
     <p>asdffdsa</p>
   </div>
-  <button type="button" onclick="expandContract()">Sample</button>
+  <button type="button" onclick="expand()" data-target="#collapse" data-toggle="collapse">Expand</button>
 </body>
 </html>
