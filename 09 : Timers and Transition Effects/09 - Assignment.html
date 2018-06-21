@@ -16,12 +16,12 @@
     /* Style to fadein */
     .fadein {
       opacity: 1;
-      transition: all ease-out 0.25s;
+      transition: all ease-out 0.5s;
     }
     /* Style to fadeout */
     .fadeout {
       opacity: 0;
-      transition: all ease-out 0.25s;
+      transition: all ease-out 0.5s;
     }
   </style>
   <script>
@@ -29,7 +29,7 @@
     //Subscript of first image to show.
     var subscript = 0;
     //Number of seconds for each picture to show.
-    var pictime = 2;
+    var pictime = 10;
     //List all of your image filenames. Filenames don't have to follow any pattern.
     var images = new Array()
     images[0] = "img/candle.jpg";
@@ -37,16 +37,14 @@
     images[2] = "img/fire.png";
     images[3] = "img/paint.png";
     images[4] = "img/water.png";
-
      //Fade out the current image, then pause.  
     function nextimg() {
       var imgtag = document.getElementById("slideimg");
       //Apply the fadeout style class.
       imgtag.className = "fadeout";
-      //wait 250ms, then get the new image.
-      setTimeout("newimg()", 250);
+      //wait 500ms, then get the new image.
+      setTimeout("newimg()", 500);
     }
-
     //Calculate and show the next image.
     function newimg() {
       //Calculate next image subscript number.
@@ -58,7 +56,6 @@
       imgtag.src = imagefile;
       imgtag.className = "fadein";
     }
-    
     //Make sure everything is loaded before starting timer.
     window.onload = function () {
       var stimer = setInterval("nextimg()", pictime * 1000);
