@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>jQueryTemplate</title>
+
+
+  <style>
+    /* Applies to all divs on this page */
+
+    div {
+      width: 100px;
+      height: 100px;
+      border: solid 1px black;
+      margin: 10px;
+      float: left;
+    }
+
+    main {
+      width: 100%;
+      display: flex;
+    }
+  </style>
+
+
+  <!-- Load jQuery 1.9.1 minified from Google CDN -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      // jQuery code to execute on any button click
+      $("button").click(function () {
+        $("div").fadeToggle();
+      });
+    });
+  </script>
+
+</head>
+
+<body>
+
+  <button>Click Me</button>
+
+  <main>
+    <div style="background-color: red">
+    </div>
+    <div style="background-color: blue">
+    </div>
+    <div style="background-color: green">
+    </div>
+    <div style="background-color: yellow">
+    </div>
+  </main>
+  
+  <br>
+  <h2>basic syntax:</h2>
+  <p>$("selector").effect(value);</p>
+  <br>
+  <h2>Special Effects</h2>
+  <br>
+  <table align="center" border="1" bordercolor="#9fc1dd" cellpadding="3" cellspacing="0" data-init-width="536" data-init-height="412"
+    width="" height="" class="e2g-responsive" style="width: 100%; max-width: 536px; max-height: 412px;">
+    <tbody>
+      <tr bgcolor="#b5cee8">
+        <td colspan="2" class="e2g-responsive" width="" height="">
+          <p align="center">
+            <strong>Popular JQuery Special Effects</strong>
+          </p>
+        </td>
+      </tr>
+      <tr bgcolor="#e6eff7">
+        <td class="e2g-responsive" width="" height="">
+          <strong>Effect</strong>
+        </td>
+        <td class="e2g-responsive" width="" height="">
+          <strong>Description</strong>
+        </td>
+      </tr>
+      <tr bgcolor="#d1e1ef">
+        <td class="e2g-responsive" width="" height="">.fadeIn</td>
+        <td class="e2g-responsive" width="" height="">Fades from hidden to opaque</td>
+      </tr>
+      <tr bgcolor="#e6eff7">
+        <td class="e2g-responsive" width="" height="">.fadeOut</td>
+        <td class="e2g-responsive" width="" height="">Fades from opaque to invisible</td>
+      </tr>
+      <tr bgcolor="#d1e1ef">
+        <td class="e2g-responsive" width="" height="">.fadeTo</td>
+        <td class="e2g-responsive" width="" height="">Fades to a specified opacity</td>
+      </tr>
+      <tr bgcolor="#e6eff7">
+        <td class="e2g-responsive" width="" height="">.fadeToggle</td>
+        <td class="e2g-responsive" width="" height="">Switches between opaque and invisible by fading</td>
+      </tr>
+      <tr bgcolor="#d1e1ef">
+        <td class="e2g-responsive" width="" height="">.hide()</td>
+        <td class="e2g-responsive" width="" height="">Hides the selected elements</td>
+      </tr>
+      <tr bgcolor="#e6eff7">
+        <td class="e2g-responsive" width="" height="">.show()</td>
+        <td class="e2g-responsive" width="" height="">Shows the selected elements</td>
+      </tr>
+      <tr bgcolor="#d1e1ef">
+        <td class="e2g-responsive" width="" height="">.slideDown()</td>
+        <td class="e2g-responsive" width="" height="">Reveals selected element by sliding down</td>
+      </tr>
+      <tr bgcolor="#e6eff7">
+        <td class="e2g-responsive" width="" height="">.slideToggle()</td>
+        <td class="e2g-responsive" width="" height="">Shows or hides the selected element by sliding up or down</td>
+      </tr>
+      <tr bgcolor="#d1e1ef">
+        <td class="e2g-responsive" width="" height="">.slideUp()</td>
+        <td class="e2g-responsive" width="" height="">Hides the selected element by sliding up</td>
+      </tr>
+      <tr bgcolor="#e6eff7">
+        <td class="e2g-responsive" width="" height="">.toggle()</td>
+        <td class="e2g-responsive" width="" height="">Shows the element if hidden, hides it if visible</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+
+</html>
