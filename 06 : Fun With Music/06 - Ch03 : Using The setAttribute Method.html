@@ -6,10 +6,10 @@
     <script>
       // Choose sound file to play based on browser capabilities.
       if (player.canPlayType('audio/mpeg').length > 0) {
-        player.setAttribute('src', '../sounds/whoosh.mp3');
+        player.setAttribute('src', 'sounds/whoosh.mp3');
       }
       if (player.canPlayType('audio/ogg; codecs="vorbis"').length > 0) {
-        player.setAttribute('src', '../sounds/whoosh.ogg');
+        player.setAttribute('src', 'sounds/whoosh.ogg');
       }
 
       //This function only runs when called. It plays the

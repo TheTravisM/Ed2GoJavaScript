@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>CH02 Loops and Arrays</title>
+
+  <style>
+    p {
+      padding: 10px;
+      margin: 10px;
+      color: white;
+      font:600;
+      font-family: 'Courier New', Courier, monospace;
+    }
+  </style>
+
+  <script>
+    var color = new Array();
+    color[0]="Red";
+    color[1]="Green";
+    color[2]="Blue";
+
+    var color = new Array("Red","Green","Blue");
+    var color = ["Red","Green","Blue","Purple","Lime","Gray"];
+
+    var arrayLength = color.length;
+
+    for (var i = 0; i <= color.length; i++) {
+        document.write("<p style='background:" + color[i] + ";'>" + color[i] + "</p>");
+    }
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

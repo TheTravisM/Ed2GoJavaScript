@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Switch Statement</title>
+</head>
+
+<body>
+  <!-- JavaScript that executes as soon as page opens. -->
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <title>Switch Demo</title>
+    <script>
+      function ternaryOperator() {
+        //Get the value from the textbox.
+        var age = parseInt(document.getElementById("yourAge").value)
+        var admission = "Your cost: $" + (age < 60 ? "7.50" : "5.00");
+        //Find and populate result paragraph.
+        document.getElementById("adminssionPrice").innerHTML = admission;
+      }
+    </script>
+  </head>
+  <body>
+    <p>How old are you? :
+      <input type="number" id="yourAge" style="width: 60px;" />
+      <button onclick="ternaryOperator()">Go</button>
+    </p>
+    <p id="adminssionPrice" style="color:red;">
+
+    </p>
+  </body>
+  </html>
+</body>
+
+</html>

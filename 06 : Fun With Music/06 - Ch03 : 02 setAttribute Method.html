@@ -9,10 +9,10 @@
       var player = document.createElement('audio');
       // Choose sound file to play based on browser capabilities.
       if (player.canPlayType('audio/mpeg').length > 0) {
-        player.setAttribute('src', '../sounds/landofpeace.mp3');
+        player.setAttribute('src', 'sounds/landofpeace.mp3');
       }
       if (player.canPlayType('audio/ogg; codecs="vorbis"').length > 0) {
-        player.setAttribute('src', '../sounds/landofpeace.ogg');
+        player.setAttribute('src', 'sounds/landofpeace.ogg');
       }
       // Sets the loop attribute so music plays continuously.
       player.setAttribute('loop', true);
